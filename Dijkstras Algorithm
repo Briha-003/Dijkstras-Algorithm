@@ -38,20 +38,24 @@ public class DijkstraAlgorithm
             adjList.get(source).add(edge);
         }
 
-        void dijkstra(int source) {
+        void dijkstra(int source) 
+        {
             PriorityQueue<Edge> minHeap = new PriorityQueue<>((a, b) -> Integer.compare(a.weight, b.weight));
             int[] distance = new int[vertices];
             Arrays.fill(distance, Integer.MAX_VALUE);
             distance[source] = 0;
             minHeap.offer(new Edge(source, 0));
 
-            while (!minHeap.isEmpty()) {
+            while (!minHeap.isEmpty()) 
+            {
                 Edge current = minHeap.poll();
                 int currVertex = current.destination;
 
-                for (Edge neighbor : adjList.get(currVertex)) {
+                for (Edge neighbor : adjList.get(currVertex)) 
+                {
                     int newDistance = distance[currVertex] + neighbor.weight;
-                    if (newDistance < distance[neighbor.destination]) {
+                    if (newDistance < distance[neighbor.destination]) 
+                    {
                         distance[neighbor.destination] = newDistance;
                         minHeap.offer(new Edge(neighbor.destination, newDistance));
                     }
@@ -59,14 +63,16 @@ public class DijkstraAlgorithm
             }
 
             // Print shortest distances
-            for (int i = 0; i < vertices; i++) {
+            for (int i = 0; i < vertices; i++) 
+            {
                 System.out.println("Shortest distance from source to " + i + ": " + distance[i]);
             }
         }
     }
 
-    public static void main(String[] args) {
-        int vertices; // Modify the number of vertices accordingly
+    public static void main(String[] args) 
+    {
+        int vertices; // Enter the number of vertices accordingly
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of vertices: ");
