@@ -6,13 +6,18 @@ Dijkstra's algorithm efficiently computes the shortest path between a specified 
 
 # Features
 Graph Representation: Supports a weighted graph structure using adjacency lists.
+
 Efficient Pathfinding: Computes shortest paths from a specified source node to all other nodes in the graph.
+
 User Interaction: Accepts user input for the number of vertices and edges, allowing dynamic graph creation.
 
 # Usage
 Input: Run the program and input the number of vertices and edges.
+
 Edge Definitions: Enter the edges with their weights.
+
 Source Node: Specify the source vertex for computing shortest paths.
+
 Output: Displays the shortest distance from the source node to every other node in the graph.
 
 # Getting Started
